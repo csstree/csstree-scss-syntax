@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var JsonLocator = require('../../helpers/JsonLocator.js');
+var JsonLocator = require('../../helpers/jsonLocator.js');
 var merge = require('../../helpers').merge;
 var wrapper = {
     stylesheet: function(ast) {
