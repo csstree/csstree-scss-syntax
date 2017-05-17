@@ -35,6 +35,7 @@
   },
   "scripts": {
     "update:docs": "node scripts/update-ast-docs.js",
+    "travis": "npm test",
     "test": "mocha --reporter dot"
   },
   "dependencies": {
