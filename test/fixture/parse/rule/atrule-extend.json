@@ -1,0 +1,90 @@
+{
+    "basic": {
+        "source": ".foo{@extend .bar;}",
+        "ast": {
+            "type": "Rule",
+            "selector": {
+                "type": "SelectorList",
+                "children": [
+                    {
+                        "type": "Selector",
+                        "children": [
+                            {
+                                "type": "ClassSelector",
+                                "name": "foo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "block": {
+                "type": "Block",
+                "children": [
+                    {
+                        "type": "Atrule",
+                        "name": "extend",
+                        "expression": {
+                            "type": "SelectorList",
+                            "children": [
+                                {
+                                    "type": "Selector",
+                                    "children": [
+                                        {
+                                            "type": "ClassSelector",
+                                            "name": "bar"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "block": null
+                    }
+                ]
+            }
+        }
+    },
+    "placeholder selector": {
+        "source": ".foo{@extend %bar;}",
+        "ast": {
+            "type": "Rule",
+            "selector": {
+                "type": "SelectorList",
+                "children": [
+                    {
+                        "type": "Selector",
+                        "children": [
+                            {
+                                "type": "ClassSelector",
+                                "name": "foo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "block": {
+                "type": "Block",
+                "children": [
+                    {
+                        "type": "Atrule",
+                        "name": "extend",
+                        "expression": {
+                            "type": "SelectorList",
+                            "children": [
+                                {
+                                    "type": "Selector",
+                                    "children": [
+                                        {
+                                            "type": "SassPlaceholderSelector",
+                                            "name": "bar"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "block": null
+                    }
+                ]
+            }
+        }
+    }
+}

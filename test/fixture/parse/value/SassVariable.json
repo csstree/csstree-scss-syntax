@@ -1,0 +1,9 @@
+{
+    "basic variable": {
+        "source": "$foo",
+        "ast": {
+            "type": "SassVariable",
+            "name": "foo"
+        }
+    }
+}

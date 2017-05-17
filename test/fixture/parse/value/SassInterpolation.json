@@ -1,0 +1,42 @@
+{
+    "basic interpolation": {
+        "source": "#{1 + 2}",
+        "ast": {
+            "type": "SassInterpolation",
+            "children": [
+                {
+                    "type": "Number",
+                    "value": "1"
+                },
+                {
+                    "type": "WhiteSpace",
+                    "value": " "
+                },
+                {
+                    "type": "Operator",
+                    "value": "+"
+                },
+                {
+                    "type": "WhiteSpace",
+                    "value": " "
+                },
+                {
+                    "type": "Number",
+                    "value": "2"
+                }
+            ]
+        }
+    },
+    "use variable": {
+        "source": "#{$foo}",
+        "ast": {
+            "type": "SassInterpolation",
+            "children": [
+                {
+                    "type": "SassVariable",
+                    "name": "foo"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "basic": {
+        "source": "%foo",
+        "ast": {
+            "type": "Selector",
+            "children": [
+                {
+                    "type": "SassPlaceholderSelector",
+                    "name": "foo"
+                }
+            ]
+        }
+    },
+    "example from docs": {
+        "source": "#context a%extreme",
+        "ast": {
+            "type": "Selector",
+            "children": [
+                {
+                    "type": "IdSelector",
+                    "name": "context"
+                },
+                {
+                    "type": "WhiteSpace",
+                    "value": " "
+                },
+                {
+                    "type": "TypeSelector",
+                    "name": "a"
+                },
+                {
+                    "type": "SassPlaceholderSelector",
+                    "name": "extreme"
+                }
+            ]
+        }
+    }
+}

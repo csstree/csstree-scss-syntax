@@ -1,0 +1,58 @@
+{
+  "name": "csstree-scss-syntax",
+  "version": "1.0.0-alpha1",
+  "description": "SCSS syntax processor based on csstree",
+  "keywords": [
+    "scss",
+    "parser",
+    "ast"
+  ],
+  "homepage": "https://github.com/csstree/csstree-scss-syntax",
+  "author": "Roman Dvornov <rdvornov@gmail.com> (https://github.com/lahmatiy)",
+  "license": "MIT",
+  "repository": "csstree/csstree-scss-syntax",
+  "bugs": {
+    "url": "https://github.com/csstree/csstree-scss-syntax/issues"
+  },
+  "main": "./lib/index",
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "mocha": true,
+      "es6": true
+    },
+    "rules": {
+      "no-duplicate-case": 2,
+      "no-undef": 2,
+      "no-unused-vars": [
+        2,
+        {
+          "vars": "all",
+          "args": "after-used"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "update:docs": "node scripts/update-ast-docs.js",
+    "test": "mocha --reporter dot"
+  },
+  "dependencies": {
+    "css-tree": "^1.0.0-alpha19"
+  },
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "jscs": "~3.0.7",
+    "json-to-ast": "^1.2.15",
+    "mocha": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "lib",
+    "HISTORY.md",
+    "LICENSE",
+    "README.md"
+  ]
+}
